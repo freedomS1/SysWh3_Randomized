@@ -1,0 +1,2 @@
+Sw3NtAllocateVirtualMemory : WETxV
+Sw3NtProtectVirtualMemory : BDUAH
