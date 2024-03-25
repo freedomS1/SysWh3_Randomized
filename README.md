@@ -10,7 +10,7 @@ I recommend deleting unnecessary content from the [Syswh3-generated files](https
 
 There are some variables in the project that cannot be easily replaced and can be implemented directly using renaming
 
-![](.\Syswh3_Randomized\bug.png)
+![](https://github.com/xiaoyaoxianj/SysWh3_Randomized/blob/master/Syswh3_Randomized/bug.png)
 
 #### Tips:
 
@@ -42,5 +42,5 @@ python Syswh3_Randomized.py -l 6 xiaoyaoj.c xiaoyaoj.asm xiaoyaoj.h
 
 #### Help
 
-![](.\Syswh3_Randomized\Syswh3_Randomizd.png)
+![](https://github.com/xiaoyaoxianj/SysWh3_Randomized/blob/master/Syswh3_Randomized/Syswh3_Randomizd.png)
 
