@@ -10,7 +10,7 @@ I recommend deleting unnecessary content from the [Syswh3-generated files](https
 
 There are some variables in the project that cannot be easily replaced and can be implemented directly using renaming
 
-![](E:\mytools\SysWh3_Randomized\Syswh3_Randomized\bug.png)
+![](.\SysWh3_Randomized\Syswh3_Randomized\bug.png)
 
 #### Tips:
 
