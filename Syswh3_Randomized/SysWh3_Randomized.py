@@ -583,15 +583,15 @@ def genkey(length):
     return key
 
 def populate(len):
-    for string in list_of_APIs:
-        modified_string = "Sw3" + string
+    for i in list_of_APIs:
+        modified_string = "Sw3" + i
         modified_strings_set.add(modified_string)
     for i in modified_strings_set:
         api_hash_dict[i] = genkey(len)
     for i in list_of_SysWh:
         api_hash_dict[i] = genkey(len)
 
-def repalce(output_file,input_file):
+def repalce_code(output_file, input_file):
     output = open(output_file, 'w')
     newline = ""
     syscall_file = open(input_file, 'r').readlines()
@@ -671,20 +671,20 @@ def replace_enough(file1,file2,file3):
         if os.path.exists(s3):
             os.remove(s3)
     tmp4, tmp5, tmp6 = transform(file1, file2, file3, '-tmp1')
-    repalce(s1,file1)
-    repalce(s2,file2)
-    repalce(s3,file3)
+    repalce_code(s1, file1)
+    repalce_code(s2, file2)
+    repalce_code(s3, file3)
     for i in range(5):
-        repalce(tmp4,s1)
-        repalce(tmp5,s2)
-        repalce(tmp6,s3)
+        repalce_code(tmp4, s1)
+        repalce_code(tmp5, s2)
+        repalce_code(tmp6, s3)
         copy_file(tmp4,s1)
         copy_file(tmp5,s2)
         copy_file(tmp6,s3)
     os.remove(tmp4)
     os.remove(tmp5)
     os.remove(tmp6)
-
+    print("[+]      Replace successfully!")
 
 def main(file1,file2,file3,length):
     print(banner)
@@ -692,16 +692,12 @@ def main(file1,file2,file3,length):
     replace_enough(file1,file2,file3)
     change_log = open("changed_log.txt", 'w')
     for i in changed_api_list:
-        try:
+        if i:
             logger = i + " : " + api_hash_dict.get(i)+'\n'
             change_log.write(logger)
-        except Exception as e:
-            print(e)
-            sys.exit()
-    print("[+]   Success!")
+    print("[+]     The log was generated successfully!")
 
 if __name__ == "__main__":
-    print(banner)
     parser = argparse.ArgumentParser(description='SysWh2_Radmonized')
     parser.add_argument("file1", help="Syswh3 c file", type=str)
     parser.add_argument("file2", help="Syswh3 asm file", type=str)
@@ -709,6 +705,7 @@ if __name__ == "__main__":
     parser.add_argument('-l',"-length",dest='length',default=5 , help='the Length of the Key ', type=int)
 
     if len(sys.argv) < 4:
+        print(banner)
         parser.print_help()
         sys.exit()
 
