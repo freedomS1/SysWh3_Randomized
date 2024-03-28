@@ -42,5 +42,5 @@ python Syswh3_Randomized.py -l 6 xiaoyaoj.c xiaoyaoj.asm xiaoyaoj.h
 
 #### Help
 
-![](https://github.com/xiaoyaoxianj/SysWh3_Randomized/blob/master/Syswh3_Randomized/Syswh3_Randomizd.png)
+![](https://github.com/xiaoyaoxianj/SysWh3_Randomized/blob/master/Syswh3_Randomized/Syswh3_Randomized.png)
 
